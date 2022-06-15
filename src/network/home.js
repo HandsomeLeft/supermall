@@ -1,14 +1,39 @@
-import {request} from "./request";
+import { request } from "./request";
+import { request_dm } from "./request_dm";
 
 export function getHomeMultidata() {
   return request({
     url: '/home/multidata'
+    // url:'/api/get_test'
+  })
+  
+}
+export function get_home_swiper() {
+  return request_dm({
+    url:'/multi_data',
   })
 }
 
+export function get_recommoned_data() {
+  return request_dm({
+    url:'/recommoned_data',
+  })
+}
+
+export function get_home_goods(type,page) {
+  return request_dm({
+    url: '/goods_list',
+    params: {
+      type,
+      page
+    }
+  })
+}
+
+
 export function getHomeGoods(type, page) {
   return request({
-    url: '/home/data',
+    url: '/home/data',  
     params: {
       type,
       page

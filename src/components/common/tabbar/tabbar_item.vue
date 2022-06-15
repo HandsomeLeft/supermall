@@ -2,8 +2,6 @@
   <div class="tabbar_item" @click="item_click">
         <div v-if="is_active"><slot name='item-icon'></slot></div>
         <div v-else><slot name='item-icon-active'></slot></div>
-
-        <!-- <div :class="{active:!is_active}"><slot name='item-text'></slot></div> -->
         <div :style="active_style"><slot name='item-text'></slot></div>
   </div>
 </template>
@@ -44,12 +42,14 @@ export default {
 <style>
 .tabbar_item {
     flex: 1;
+    font-size: 3px;
 }
 .tabbar_item img {
     width: 24px;
     vertical-align: middle;
+    margin: 4px 0px;
 }
 .active {
-  color: deeppink;
+  color: #0086f6;
 }
 </style>

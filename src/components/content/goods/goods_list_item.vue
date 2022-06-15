@@ -1,6 +1,7 @@
 <template>
-  <div class="goods_list_item">
-      <img :src="goods_item.show.img" alt="">
+  <div class="goods_list_item" @click="good_click">
+      <!-- <img :src="goods_item.show.img" alt=""> -->
+      <img :src="goods_item.image_url" alt="">
       <div class="goods_info">
           <p>{{goods_item.title}}</p>
           <span class="price">{{goods_item.price}}</span>
@@ -19,6 +20,12 @@ export default {
                 return {}
             }
         }
+    },
+    methods:{
+      good_click(){
+        // console.log(1);
+        this.$router.push('/detail/' + this.goods_item.iid)
+      }
     }
 }
 </script>

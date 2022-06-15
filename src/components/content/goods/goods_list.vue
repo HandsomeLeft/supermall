@@ -6,6 +6,7 @@
 
 <script>
 import goods_list_item from 'components/content/goods/goods_list_item'
+import goods_list from 'components/content/goods/goods_list'
 
 
 export default {
